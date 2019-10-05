@@ -51,7 +51,7 @@ public class Connection : SerializedMonoBehaviour
     private Color startColor;
     Dictionary<int, Vector2Int> direction;
     private Image image;
-    private bool isFinished;
+    public bool isFinished;
     [SerializeField] private Image connectionDown, connectionRight;
 
     public void SetLayer(int layer)
@@ -89,7 +89,7 @@ public class Connection : SerializedMonoBehaviour
         UpdateRotation();
     }
 
-    private void Update()
+    public void LogicUpdate()
     {
         sprite.transform.localRotation = Quaternion.RotateTowards(sprite.transform.localRotation, target, Time.deltaTime * turnSpeed);
         if (hover)
@@ -105,7 +105,10 @@ public class Connection : SerializedMonoBehaviour
                 Rotate(1);
             }
         }
+    }
 
+    public void VisualUpdate()
+    {
         if (type == ConnectionType.Beggining && layer == currentLayer)
         {
             foreach (KeyValuePair<Vector2Int, Connection> p in posToConnection)
