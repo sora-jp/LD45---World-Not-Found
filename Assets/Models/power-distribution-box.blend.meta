@@ -6,7 +6,32 @@ ModelImporter:
   - first:
       74: 1989289236423521904
     second: Default Take
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: c45ce2b1c55180e42babc9e8a9a502cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Inside
+    second: {fileID: 2100000, guid: 80efad14bd99a464a9a6b58cd91877f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 0524d746ffeb986409e8e0fcd99311e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire_Connections
+    second: {fileID: 2100000, guid: 5e38cca1b11a21b46a50f5fcbb0fe455, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wires
+    second: {fileID: 2100000, guid: afa6d1b1555415e4783b13454d129cb5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
