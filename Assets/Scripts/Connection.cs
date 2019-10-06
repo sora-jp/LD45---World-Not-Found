@@ -39,7 +39,7 @@ public class Connection : SerializedMonoBehaviour
     private bool hover;
     private Quaternion target;
     [PreviouslySerializedAs("smooth")]public float turnSpeed;
-    [SerializeField] ConnectionType type;
+    [SerializeField] public ConnectionType type;
     [HideIf("type", ConnectionType.Normal)]
     [SerializeField] private int layer = -1;
 
@@ -93,10 +93,8 @@ public class Connection : SerializedMonoBehaviour
     {
         if (hover)
         {
-            Debug.Log("Hover");
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Rotate");
                 Rotate(3);
             }
             else if (Input.GetMouseButtonDown(1))

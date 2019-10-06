@@ -10,7 +10,9 @@ public abstract class Minigame : SelectableMonoBehaviour, IMinigame
 
     protected void CompleteMinigame()
     {
-        m_completionCallback();
+        if (m_complete) return;
+
+        m_completionCallback?.Invoke();
         m_complete = true;
     }
 
@@ -21,6 +23,8 @@ public abstract class Minigame : SelectableMonoBehaviour, IMinigame
 
     protected override void Update()
     {
+        if (m_complete) return;
+
         base.Update();
         VisualUpdate();
     }
