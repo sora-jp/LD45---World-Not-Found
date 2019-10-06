@@ -12110,11 +12110,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screen
       objectReference: {fileID: 0}
-    - target: {fileID: 6589681628049923211, guid: e519610de69ff6947b8e65cfadc230ce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6589681628049923210, guid: e519610de69ff6947b8e65cfadc230ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12174,33 +12169,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 969402570, guid: e519610de69ff6947b8e65cfadc230ce, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539500193, guid: e519610de69ff6947b8e65cfadc230ce, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2905575546236965777, guid: e519610de69ff6947b8e65cfadc230ce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931229695, guid: e519610de69ff6947b8e65cfadc230ce, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8612214283650738685, guid: e519610de69ff6947b8e65cfadc230ce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891626205084316030, guid: e519610de69ff6947b8e65cfadc230ce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e519610de69ff6947b8e65cfadc230ce, type: 3}
 --- !u!1001 &8775111569063307692
