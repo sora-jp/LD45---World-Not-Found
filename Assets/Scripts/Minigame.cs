@@ -7,6 +7,7 @@ public abstract class Minigame : SelectableMonoBehaviour, IMinigame
 {
     private Action m_completionCallback;
     private bool m_complete = false;
+    public bool Completed => m_complete;
 
     protected void CompleteMinigame()
     {
@@ -23,8 +24,6 @@ public abstract class Minigame : SelectableMonoBehaviour, IMinigame
 
     protected override void Update()
     {
-        if (m_complete) return;
-
         base.Update();
         VisualUpdate();
     }
@@ -32,6 +31,7 @@ public abstract class Minigame : SelectableMonoBehaviour, IMinigame
     protected override void SelectedUpdate()
     {
         if (m_complete) return;
+
         LogicUpdate();
     }
 

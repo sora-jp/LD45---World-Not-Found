@@ -38,9 +38,9 @@ public class Crosshair : MonoBehaviour
 
         if (!Interactor.Instance.HoverUpdated) return;
 
-        var h = Interactor.Instance.Hovering;
+        var h = Interactor.Instance.Hovering && Interactor.Instance.CanInteract;
         StopAllAnims();
-        m_group.AnimateAlpha(hide ? 0 : (h ? 1 : 0.5f), animTime, easeMode);
+        m_group.AnimateAlpha(hide ? 0 : (h ? 1 : 0.2f), animTime, easeMode);
         m_transform.AnimateLocalRotation(Quaternion.Euler(0, 0, h ? 90 : 0), animTime, easeMode);
         m_transform.AnimateSizeDelta(Vector2.one * (h ? 50 : 25), animTime, easeMode);
     }

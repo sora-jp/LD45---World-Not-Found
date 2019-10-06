@@ -5,12 +5,20 @@ using UnityEngine;
 
 public class PowerMinigame : Minigame
 {
-    public Connection[] connections;
+    private Connection[] connections;
     public CinemachineVirtualCamera vcam;
+    public SwingDoor door;
 
     private void Awake()
     {
         HideMouse = false;
+        connections = GetComponentsInChildren<Connection>();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        CanSelect = door.isOpen;
     }
 
     public override void Select()
