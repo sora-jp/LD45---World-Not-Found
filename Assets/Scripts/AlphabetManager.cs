@@ -10,6 +10,16 @@ public class AlphabetManager : SerializedMonoBehaviour
 
     private void Start()
     {
+        string alphabet = "abcdefghijklmnopqrstuvwxyz";
+        string characters = "i̸̛͓^q̷̧͌̓ḿ̵͔̞͋o̴͕̍̅y̴̖̦̿̾?r̵̒ċ̷͔͜͝q̵͉͝w̶͓̎̽k̸͕͐̂v̴͙̈ǎ̵̬u̸̲͐̽i̶̪͖̔̕#x̷͖̅͆t̴̰͐́l̵̒̈́͜m̷͔̗̀q̶̱̂*h̴̛̖̤͝u̶͎̚͝h̵̙͐";
+
+        for (int i = 0; i < 26; i++)
+        {
+            alphabetMap[alphabet[i]] = characters[i];
+
+            transform.GetChild(1).GetChild(i).GetComponent<AlphabetLetter>().text.text = characters[i].ToString();
+        }
+
         UpdateAllText();
     }
 
@@ -17,17 +27,17 @@ public class AlphabetManager : SerializedMonoBehaviour
     {
         foreach (AlphabetModuleText a in FindObjectsOfType<AlphabetModuleText>())
         {
-            UpdateText(a);
+            a.UpdateText();
         }
     }
 
-    public void UpdateText(AlphabetModuleText a)
+    public void UpdateText(AlphabetModuleText a, string ogText)
     {
         TextMeshProUGUI UIText = a.GetComponent<TextMeshProUGUI>();
 
         string text = "";
 
-        foreach (char c in UIText.text)
+        foreach (char c in ogText)
         {
             char map;
             if (!alphabetMap.TryGetValue(char.ToLower(c), out map))

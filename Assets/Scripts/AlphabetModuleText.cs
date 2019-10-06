@@ -5,20 +5,29 @@ using TMPro;
 
 public class AlphabetModuleText : MonoBehaviour
 {
-    private string lastText;
+    private string lastText = "";
+    public string text = "";
     private TextMeshProUGUI textUI;
 
-    private void Start()
+    private void Awake()
     {
         textUI = GetComponent<TextMeshProUGUI>();
+        text = textUI.text;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lastText != textUI.text)
+        if (lastText != text)
         {
-            FindObjectOfType<AlphabetManager>().UpdateText(this);
+            UpdateText();
         }
+
+        lastText = text;
+    }
+
+    public void UpdateText()
+    {
+        FindObjectOfType<AlphabetManager>().UpdateText(this, text);
     }
 }
