@@ -32,7 +32,7 @@ public class PowerMinigame : Minigame
         {
             c.LogicUpdate();
 
-            if (!c.isFinished) win = false;
+            if (c.type == ConnectionType.End && !c.isFinished) win = false;
         }
 
         if (win) CompleteMinigame();
