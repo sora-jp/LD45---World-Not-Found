@@ -91,7 +91,6 @@ public class Connection : SerializedMonoBehaviour
 
     public void LogicUpdate()
     {
-        sprite.transform.localRotation = Quaternion.RotateTowards(sprite.transform.localRotation, target, Time.deltaTime * turnSpeed);
         if (hover)
         {
             Debug.Log("Hover");
@@ -109,6 +108,7 @@ public class Connection : SerializedMonoBehaviour
 
     public void VisualUpdate()
     {
+        sprite.transform.localRotation = Quaternion.RotateTowards(sprite.transform.localRotation, target, Time.deltaTime * turnSpeed);
         if (type == ConnectionType.Beggining && layer == currentLayer)
         {
             foreach (KeyValuePair<Vector2Int, Connection> p in posToConnection)

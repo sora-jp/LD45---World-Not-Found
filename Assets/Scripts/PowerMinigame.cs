@@ -1,15 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class PowerMinigame : Minigame
 {
-    private Connection[] connections;
+    public Connection[] connections;
+    public CinemachineVirtualCamera vcam;
 
     private void Awake()
     {
         HideMouse = false;
-        connections = FindObjectsOfType<Connection>();
+    }
+
+    public override void Select()
+    {
+        base.Select();
+        vcam.enabled = true;
+    }
+
+    public override void Deselect()
+    {
+        base.Deselect();
+        vcam.enabled = false;
     }
 
     public override void LogicUpdate()
