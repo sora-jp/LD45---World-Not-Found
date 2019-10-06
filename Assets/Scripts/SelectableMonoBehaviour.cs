@@ -26,6 +26,7 @@ public class SelectableMonoBehaviour : MonoBehaviour, ISelectable
 
     }
 
+    public bool CanSelect { get; set; } = true;
     public virtual bool BlocksInput { get; set; } = true;
     public virtual bool HideMouse { get; set; } = true;
 }
