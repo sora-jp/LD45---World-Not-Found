@@ -6,6 +6,7 @@ using UnityEngine;
 public class VirtualScreen : SelectableMonoBehaviour
 {
     public CinemachineVirtualCamera vCam;
+    public ISelectable delegated;
 
     void Awake()
     {
